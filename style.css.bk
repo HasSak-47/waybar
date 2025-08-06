@@ -1,0 +1,139 @@
+* {
+    font-family: 'FiraCode Nerd Font', monospace;
+    font-size: 14px;
+    border-radius: 10;
+}
+
+@define-color color-1 #9C0911;
+@define-color color-2 #7b0c12;
+@define-color color-3 #590f13;
+@define-color color-4 #151515;
+@define-color color-5 #2a2a2a;
+@define-color col-txt #ffffff;
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.0);
+    color: @col-txt;
+    transition-property: background-color;
+    transition-duration: .5s;
+    margin: 100px;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* Avoid rounded borders under each button name */
+    border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+#workspaces{
+    background-color: @color-1;
+}
+
+
+#workspaces button {
+    padding-right: 0px;
+    padding-left: 0px;
+    color: @col-txt;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 40px;
+}
+
+#workspaces button:hover {
+    background: @color-3;
+    box-shadow: inset 0 0 @color-1;
+}
+
+/* sway */
+#workspaces button.focused {
+    background: @color-3;
+}
+
+/* hyprland */
+
+#workspaces button.active {
+    background: @color-3;
+}
+
+#workspaces button.urgent {
+    background-color: @color-1;
+}
+
+#mode {
+    background-color: @color-5;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#bluetooth,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: @col-txt;
+    background-color: @color-5;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover,
+#pipewire:hover,
+#clock:hover,
+#tray:hover,
+#network:hover
+{
+    background-color: @color-3;
+}
+
+#window,
+#workspaces {
+    margin: 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}
