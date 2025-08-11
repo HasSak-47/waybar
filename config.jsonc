@@ -6,7 +6,6 @@
 
     "modules-left": [
         "wireplumber",
-        "mpd",
         "hyprland/workspaces",
     ],
     "modules-center": [
@@ -29,11 +28,14 @@
             "7": "msc",
             "8": "stm",
             "9": "dsc",
-            "default": "..."
+            "empty": ".",
+            "default": "...",
+            "active": "@",
+            "urgent": "!",
         },
-        "persistent-workspaces" : {
-            "1":{},"2":{},"3":{},"4":{},"5":{},"6":{},"7":{},"8":{},"9":{}
-        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5, 7, 8, 9, 0],
+        }
     },
     "hyprland/window": {
         "rotate": 90,
@@ -61,6 +63,7 @@
     "wireplumber": {
         "format": " {volume}% ",
         "format-muted": "",
+        "on-click": "pavucontrol",
         "max-volume": 150,
         "scroll-step": 0.2,
         "rotate": 90,
@@ -98,19 +101,19 @@
         "format": "== {user} @ MACHINE ==",
         "icon": true,
     },
-"mpris": {
-    "rotate": 90,
-	"format": "== {dynamic} == ",
-	"format-paused": "",
-    "dynamic-order" : ["artist", "title"],
-    "dynamic-len" : 20,
-	"player-icons": {
-		"default": "",
-	},
-	"status-icons": {
-		"paused": ""
-	},
-	"ignored-players": ["firefox", "zen-browser"]
-}
+    "mpris": {
+        "rotate": 90,
+    	"format": "== {dynamic} == ",
+    	"format-paused": "",
+        "dynamic-order" : ["artist", "title"],
+        "dynamic-len" : 20,
+    	"player-icons": {
+    		"default": "",
+    	},
+    	"status-icons": {
+    		"paused": ""
+    	},
+    	"ignored-players": ["firefox", "zen-browser"]
+    }
 }
 
