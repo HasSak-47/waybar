@@ -1,6 +1,6 @@
 * {
-    font-family: 'FiraCode Nerd Font', monospace;
-    font-size: 14px;
+  font-family: "FiraCode Nerd Font", monospace;
+  font-size: 14px;
 }
 
 @define-color color-1 #9C0911;
@@ -11,52 +11,53 @@
 @define-color col-txt #ffffff;
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
-    color: @col-txt;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: rgba(0, 0, 0, 0);
+  color: @col-txt;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
-.modules-right{
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 255);
-    margin-right: 8px;
-    margin-bottom: 8px;
+.modules-right {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 255);
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
-.modules-left{
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 255);
-    margin-right: 8px;
-    margin-top: 8px;
+.modules-left {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 255);
+  margin-right: 8px;
+  margin-top: 8px;
 }
 
-#clock, #network, #tray{
-    padding: 10px;
+#clock,
+#network,
+#tray {
+  padding: 10px;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    border-radius: 5px;
-    background: #000000;
-    background-color: #000000;
-    box-shadow: none;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: #000000;
+  background-color: #000000;
+  box-shadow: none;
 
-    border: 0px;
+  border: 0px;
 }
 
-#workspaces button:hover{
-    color: #ff8888;
-    font-weight:normal;
-    box-shadow: none;
+#workspaces button:hover {
+  color: #ff8888;
+  font-weight: normal;
+  box-shadow: none;
 }
 
 #workspaces button.active {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 #workspaces button.active:hover {
-    color: #aa0000;
-    font-weight:bold;
+  color: #aa0000;
+  font-weight: bold;
 }
-

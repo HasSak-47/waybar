@@ -1,119 +1,103 @@
 {
-    "spacing": 0, // Gaps between modules (4px)
-    "width": 20,
-    "position": "right",
-    "start-hidden": true,
+  "spacing": 0, // Gaps between modules (4px)
+  "width": 20,
+  "position": "right",
+  "start-hidden": true,
 
-    "modules-left": [
-        "wireplumber",
-        "hyprland/workspaces",
-    ],
-    "modules-center": [
-        "user",
-        "mpris"
-    ],
-    "modules-right": [
-        "group/data",
-        "clock",
-        "tray"
-    ],
+  "modules-left": ["wireplumber", "hyprland/workspaces"],
+  "modules-center": ["user", "mpris"],
+  "modules-right": ["group/data", "clock", "tray"],
 
-    // module definitions
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "format-icons": {
-            "1": "tty",
-            "2": "zen",
-            "7": "msc",
-            "8": "stm",
-            "9": "dsc",
-            "empty": ".",
-            "default": "...",
-            "active": "@",
-            "urgent": "!",
-        },
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5, 7, 8, 9, 0],
-        }
+  // module definitions
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "tty",
+      "2": "zen",
+      "7": "msc",
+      "8": "stm",
+      "9": "dsc",
+      "empty": ".",
+      "default": "...",
+      "active": "@",
+      "urgent": "!",
     },
-    "hyprland/window": {
-        "rotate": 90,
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     },
-    "group/data":{
-        "orientation": "vertical",
-        "transition-durattion": 100,
-        "drawer":{"click-to-reveal": true,},
-		"modules": [
-			"network",
-			"cpu",
-			"memory",
-			"bluetooth",
-		]
-    },
-    "network": {
-        "format":"",
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "eth",
-        "rotate": 90,
-    },
-    "bluetooth": {
-        "format":"",
-    },
-    "wireplumber": {
-        "format": " {volume}% ",
-        "format-muted": "",
-        "on-click": "pavucontrol",
-        "max-volume": 150,
-        "scroll-step": 0.2,
-        "rotate": 90,
-    },
+  },
+  "hyprland/window": {
+    "rotate": 90,
+  },
+  "group/data": {
+    "orientation": "vertical",
+    "transition-durattion": 100,
+    "drawer": { "click-to-reveal": true },
+    "modules": ["network", "cpu", "memory", "bluetooth"],
+  },
+  "network": {
+    "format": "",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "eth",
+    "rotate": 90,
+  },
+  "bluetooth": {
+    "format": "",
+  },
+  "wireplumber": {
+    "format": " {volume}% ",
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "max-volume": 150,
+    "scroll-step": 0.2,
+    "rotate": 90,
+  },
 
-    "clock": {
-        "format":"{:%H\n%M}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode"          : "year",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
-            "on-scroll"     : 1,
-            "format": {
-                "months":     "<span color='#ff0000'><b>{}</b></span>",
-                "days":       "<span color='#ff0000'><b>{}</b></span>",
-                "weeks":      "<span color='#ff0000'><b>W{}</b></span>",
-                "weekdays":   "<span color='#ff0000'><b>{}</b></span>",
-                "today":      "<span color='#ff0000'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions":  {
-            "on-click-right": "mode",
-            "on-scroll-up": "tz_up",
-            "on-scroll-down": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+  "clock": {
+    "format": "{:%H\n%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ff0000'><b>{}</b></span>",
+        "days": "<span color='#ff0000'><b>{}</b></span>",
+        "weeks": "<span color='#ff0000'><b>W{}</b></span>",
+        "weekdays": "<span color='#ff0000'><b>{}</b></span>",
+        "today": "<span color='#ff0000'><b><u>{}</u></b></span>",
+      },
     },
-    "tray": {
-        "rotate": 90,
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
     },
-    "user": {
-        "rotate": 90,
-        "format": "== {user} @ MACHINE ==",
-        "icon": true,
+  },
+  "tray": {
+    "rotate": 90,
+  },
+  "user": {
+    "rotate": 90,
+    "format": "== {user} @ MACHINE ==",
+    "icon": true,
+  },
+  "mpris": {
+    "rotate": 90,
+    "format": "== {dynamic} == ",
+    "format-paused": "",
+    "dynamic-order": ["artist", "title"],
+    "dynamic-len": 20,
+    "player-icons": {
+      "default": "",
     },
-    "mpris": {
-        "rotate": 90,
-    	"format": "== {dynamic} == ",
-    	"format-paused": "",
-        "dynamic-order" : ["artist", "title"],
-        "dynamic-len" : 20,
-    	"player-icons": {
-    		"default": "",
-    	},
-    	"status-icons": {
-    		"paused": ""
-    	},
-    	"ignored-players": ["firefox", "zen-browser"]
-    }
+    "status-icons": {
+      "paused": "",
+    },
+    "ignored-players": ["firefox", "zen-browser"],
+  },
 }
-
