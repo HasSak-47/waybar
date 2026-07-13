@@ -4,8 +4,8 @@
   "position": "right",
   "start-hidden": true,
   "modules-left": ["wireplumber", "hyprland/workspaces"],
-  "modules-center": ["user", "mpris"],
-  "modules-right": ["group/data", "clock", "tray"],
+  "modules-center": ["custom/user", "mpris"],
+  "modules-right": ["group/data", "battery", "clock", "tray"],
   // module definitions
   "hyprland/workspaces": {
     "move-to-monitor": true,
@@ -37,7 +37,7 @@
   },
   "network": {
     "format": "",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "({signalStrength}%) ",
     "format-ethernet": "eth",
     "rotate": 90,
   },
@@ -45,8 +45,8 @@
     "format": "",
   },
   "wireplumber": {
-    "format": " {volume}% ",
-    "format-muted": "",
+    "format": " {volume}%",
+    "format-muted": "  ",
     "on-click": "pavucontrol",
     "max-volume": 150,
     "scroll-step": 0.2,
@@ -98,4 +98,22 @@
     },
     "ignored-players": ["firefox", "zen-browser"],
   },
+  "custom/user": {
+    "exec": "sh ~/.config/waybar/custom_user.sh",
+    "rotate":90,
+    "format": "== {} ==",
+  },
+  "battery": {
+    "rotate": 90,
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  }
+
 }

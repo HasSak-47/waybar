@@ -1,5 +1,5 @@
 * {
-  font-family: "FiraCode Nerd Font", monospace;
+  font-family: "FiraCode", monospace;
   font-size: 14px;
 }
 
@@ -31,18 +31,26 @@ window#waybar {
   margin-top: 8px;
 }
 
+#wireplumber{
+  padding-top: 8px;
+  min-height: 4em;
+}
+
+#battery,
 #clock,
 #network,
 #tray {
   padding: 10px;
 }
 
+#battery,
 #workspaces button {
   padding: 0 5px;
   border-radius: 5px;
   background: #000000;
   background-color: #000000;
   box-shadow: none;
+  color: @col-txt;
 
   border: 0px;
 }
